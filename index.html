@@ -5,19 +5,56 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./main.js">
+         import Navigo from "navigo"; // When using ES modules.
+        const router = new Navigo("/");
+         router.on("/", function () {
+        console.log("youre on the landing page");
+      });
+    </script>
   </head>
   <body>
     <div id="app">
-      <div class="container">
+      <div class="container" id="containerController">
         <div class="UpperContainer">Hello, Welcome to my Pokemon App</div>
         <div class="BellowContainer">
-          <div class="loginButton"><a href="#"> Login </a></div>
+          <!-- <form action="" method="post" id="form" class="loginForm">
+            <div class="message" id="message"></div>
+            <label for="">User:</label>
+            <input type="text" placeholder="" id="username" />
+            <label for="">Password: </label>
+            <input type="password" placeholder=" " id="password" />
+            <button type="submit" class="submitbtn">submit</button>
+          </form> -->
+          <div class="loginButton">
+            <a href="/login" onclick="route()"> Login </a>
+          </div>
 
-          <div class="RegisterButton"><a href="#"> Register </a></div>
+          <div class="RegisterButton">
+            <a href="/register" onclick="route()"> Register </a>
+          </div>
         </div>
       </div>
+      <div class="main-page"></div>
     </div>
   </body>
-  <script></script>
+  <script>
+    var form = document.getElementById("form");
+    var error = [];
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      if (username == "" || password == "") {
+        error = [];
+        error.push("Please check if your username and password are filled");
+      } else if (username !== "" && password == "") {
+        error = [];
+        error.push("Please enter a password");
+      } else {
+        error = [];
+      }
+      var message = (document.getElementById("message").innerHTML = error);
+    });
+  </script>
 </html>

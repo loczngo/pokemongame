@@ -1,0 +1,234 @@
+* {
+    background-color: #202124;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    height: 1060px;
+
+}
+
+.rightside {
+    gap: 130px;
+    flex: 1;
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.leftside {
+    flex: 3;
+
+    width: 100%;
+    height: 300px;
+}
+
+.topright {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 400px;
+}
+
+.rightLabel {
+    font-size: 40px;
+    color: White;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.rightLabel span {
+
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        color: rgb(190, 76, 190);
+        filter: blur(1px) hue-rotate(0deg);
+        text-shadow: 0 0 10px #ff16e4,
+            0 0 20px #ff16e4,
+            0 0 40px #ff16e4,
+            0 0 80px #ff16e4,
+            0 0 120px #ff16e4,
+            0 0 200px #ff16e4 0 0 300px #ff16e4 0 0 400px #ff16e4
+    }
+
+    100% {
+        color: rgb(190, 76, 190);
+        filter: blur(1px) hue-rotate(360deg);
+        text-shadow: 0 0 10px #ff16e4,
+            0 0 20px #ff16e4,
+            0 0 40px #ff16e4,
+            0 0 80px #ff16e4,
+            0 0 120px #ff16e4,
+            0 0 200px #ff16e4 0 0 300px #ff16e4 0 0 400px #ff16e4
+    }
+
+}
+
+.rightTime {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(229, 162, 229);
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.buttonstate {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 3px solid rgb(190, 76, 190);
+    padding: 15px;
+    border-radius: 50px;
+    color: rgb(217, 11, 193);
+    font-weight: bolder;
+    width: 100px;
+}
+
+.rightState {
+    display: flex;
+    gap: 10px;
+}
+
+.users {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.rightLeaderBoard {
+    display: flex;
+    flex-direction: row;
+}
+
+.botright {
+    display: flex;
+    flex-direction: column;
+    margin-top: -80px;
+    gap: 20px;
+}
+
+.score {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.users {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 300px;
+}
+
+.users label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    color: white;
+
+}
+
+.scoreLabel {
+    color: White;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.scoreLabel span {
+
+    animation: animate2 3s linear infinite;
+}
+
+@keyframes animate2 {
+    0% {
+        color: rgb(190, 76, 190);
+        filter: blur(1px) hue-rotate(0deg);
+        text-shadow: 0 0 10px #ff16e4,
+            0 0 20px #ff16e4,
+            0 0 40px #ff16e4,
+            0 0 80px #ff16e4,
+            0 0 120px #ff16e4,
+            0 0 200px #ff16e4 0 0 300px #ff16e4 0 0 400px #ff16e4
+    }
+
+    100% {
+        color: rgb(190, 76, 190);
+        filter: blur(1px) hue-rotate(360deg);
+        text-shadow: 0 0 10px #ff16e4,
+            0 0 20px #ff16e4,
+            0 0 40px #ff16e4,
+            0 0 80px #ff16e4,
+            0 0 120px #ff16e4,
+            0 0 200px #ff16e4 0 0 300px #ff16e4 0 0 400px #ff16e4
+    }
+
+}
+
+
+.rightScore {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(190, 76, 190);
+    font-size: 60px;
+    margin-top: 15px;
+}
+
+.buttonstate:hover {
+    animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow:
+            0 0 25px #ec0fcf,
+            0 0 50px #6d26d7;
+    }
+
+}
+
+.rightTime span {
+    animation: neon-pulse-animation 7s infinite;
+}
+
+@keyframes neon-pulse-animation {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 40px #ff00de, 0 0 60px #ff00de;
+        color: #fff;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 40px #ff00de, 0 0 60px #ff00de;
+        color: #fff;
+    }
+}
+
+.rightScore span {
+    animation: neon-pulse-animation2 6s infinite;
+}
+
+@keyframes neon-pulse-animation2 {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 40px #ff00de, 0 0 60px #ff00de;
+        color: #fff;
+
+    }
+
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 40px #ff00de, 0 0 60px #ff00de;
+        color: #fff;
+    }
+}
+
+.rightScore {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

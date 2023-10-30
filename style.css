@@ -127,3 +127,30 @@ button:focus-visible {
   padding: 10px;
   width: 100%;
 }
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  align-items: center;
+}
+
+.loginForm input {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #646cff;
+  border-radius: 20px;
+}
+
+.message {
+  color: #646cff;
+  ;
+}
+
+.submitbtn {
+  margin-top: 10px;
+  width: 100px;
+  color: #646cff
+}
