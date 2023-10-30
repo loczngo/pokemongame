@@ -8,7 +8,10 @@
   </head>
   <body>
     <div class="container">
-      <div class="leftside"></div>
+      <div class="leftside" id="leftside">
+        <div class="containerleft" id="containerleft">
+        </div>
+      </div>
       <div class="rightside">
         <div class="topright">
           <div class="rightLabel"><span> Time:</span></div>
@@ -34,6 +37,54 @@
         </div>
       </div>
     </div>
-    <script></script>
+    <script>
+           // Function to fetch data and display it
+           function fetchAndDisplayData() {
+            const numb =  Math.floor(Math.random() * 1000);
+            console.log(numb)
+            const url = `https://pokeapi.co/api/v2/pokemon/${numb}`
+              fetch(url)
+              .then(res=>{ 
+              res.json().then((data ) => {
+                console.log(data)
+                  document.getElementById('containerleft').innerHTML = `<div>
+                    
+                    <input class="pokeInput" placeholder="What's the name?"></input>
+                    <button class="btnsubmit">Answer! </button>
+                    <div class="pokemonHandler">
+                        <p class="pokemonName">${data.species.name}<p/>
+                        <img class="pokemonImg" src=${data.sprites.front_default}></img>
+                      </div>
+
+                    </div>`
+              });
+              }).then(data=> {
+                        // console.log(data.results)
+                        //   data.forEach((pokemon, idx) => { 
+                        //     const markup = `<p class="pokemonName">${pokemon.name} </p>
+                        //                     <br/>
+                                              
+                        //                     <p id="${idx}" class="pokemonName" >${pokemon.id}  </p>
+                        //                       `
+                        //     document.querySelector('#containerleft').insertAdjacentHTML('beforeend',markup);
+                        //   })      
+              }).catch(error=>{
+                console.log(error);
+              })
+  }
+
+  // Call the fetchAndDisplayData function to fetch and display the data
+  fetchAndDisplayData();
+      
+</script>
+
+
+
+
+
+
+
+
+    </script>
   </body>
 </html>

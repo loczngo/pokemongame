@@ -232,3 +232,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.pokemonName {
+    color: rgb(212, 181, 181);
+}
